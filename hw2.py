@@ -1,12 +1,17 @@
+f = open("prime.txt", "r+")
 lower = 1
 upper = 1000
 
-print("All prime numbers between",lower,"and",upper,"are:")
-
 for x in range(lower,upper + 1):
-    if x > 1:
+    if x > 2:
         for i in range(2,x):
             if (x % i) == 0:
                 break
         else:
-            print(x)
+            f.write(str(x))
+
+f.close()
+                
+
+
+    
